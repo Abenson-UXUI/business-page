@@ -217,6 +217,14 @@ section {
   background: var(--AbensonBlue, #1e22aa);
   font-family: var(--font-family, "Poppins");
   color: var(--primary-text-bg, #fff);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+#see-more-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 /* members perks section */
 #members-perks-section {
@@ -276,7 +284,10 @@ section {
   border-radius: 30px;
   padding: 10px 20px;
 }
-
+.btn-join-ab-business-perks:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
 /* Explore Products Section */
 #explore-products-section {
   padding: 40px 20px;
