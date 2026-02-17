@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --PrimaryTextColor: #4c525c;
+  --SecondaryGray: #767676;
+  --AbensonBlue: #1e22aa;
+  --AbensonBlueBrighter: #006de2;
+  --Paragraph-Text: #5a5a59;
+  --font-family: "Poppins";
+  --primary-text-bg: #fff;
+}
+
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+#business-hero-section {
+  background-image: url(/img/background-image-hero-section.png);
+  padding-top: 50px;
+  background-size: contain;
+}
+.business-hero-headContainer {
+  padding: 40px 20px;
+  align-items: center;
+}
+.business-hero-heading {
+  color: var(--PrimaryTextColor, #4c525c);
+  font-family: var(--font-family, "Poppins");
+  text-align: center;
+  font-size: clamp(24px, 3.5vw, 52px);
+  line-height: 1.3;
+}
+.abenson-title {
+  color: var(--AbensonBlue, #1e22aa);
+}
+.business-title {
+  color: var(--AbensonBlueBrighter, #006de2);
+}
+.intro-paragraph {
+  color: #4a5568;
+  text-align: center;
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(12px, 3vw, 16px);
+  margin: 24px 22px;
+}
+#hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero-buttons a {
+  font-family: var(--font-family, "Poppins");
+  text-decoration: none;
+  border: 2px solid var(--AbensonBlue, #1e22aa);
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin: 7px;
+}
+.btn-join-ab-business {
+  font-size: clamp(12px, 3vw, 15px);
+  color: var(--primary-text-bg, #fff);
+  background-color: var(--AbensonBlue, #1e22aa);
+}
+.btn-get-qoute {
+  font-size: clamp(12px, 3vw, 15px);
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--AbensonBlue, #1e22aa);
+}
+#hero-container {
+  background: var(--primary-text-bg, #fff);
+  box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.08);
+  padding: 24px 0;
+}
+.hero-container-item {
+  font-family: var(--font-family, "Poppins");
+  display: flex;
+  padding: 20px 50px;
+  gap: 1rem;
+}
+.hero-container-content h2 {
+  color: var(--PrimaryTextColor, #4c525c);
+  font-size: clamp(14px, 3vw, 16px);
+}
+.hero-container-content p {
+  color: var(--SecondaryGray, #767676);
+  font-size: clamp(12px, 3vw, 14px);
+}
+/* Business Solutions Section */
+#business-solutions-section {
+  background-color: var(--primary-text-bg, #fff);
+  padding: 20px 20px 40px;
+}
+.business-solutions-intro {
+  margin: 0 20px;
+}
+.business-solutions-title {
+  color: var(--Paragraph-Text, #5a5a59);
+  font-family: var(--font-family, "Poppins");
+  background-color: var(--primary-text-bg, #fff);
+  font-size: clamp(12px, 3vw, 16px);
+  border: 1px solid rgba(19, 19, 19, 0.1);
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 40px;
+}
+.business-solutions-heading {
+  color: var(--PrimaryTextColor, #4c525c);
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(24px, 3vw, 40px);
+  margin: 12px 0 16px;
+  line-height: 1.3;
+}
+.business-solutions-description {
+  color: var(--SecondaryGray, #767676);
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(13px, 3vw, 18px);
+}
+.business-card-grid {
+  margin-top: 32px;
+  display: grid;
+  gap: 10px;
+}
+.business-offer-card {
+  display: flex;
+  background-color: var(--primary-text-bg, #fff);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
+  padding: 17px 16px;
+  gap: 10px;
+  overflow: hidden;
+}
+.card-text-content {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family, "Poppins");
+}
+.business-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--PrimaryTextColor, #4c525c);
+  margin: 0 0 8px 0;
+}
+.business-card-title h2 {
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.3;
+}
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+}
+.business-card-paragraph {
+  color: var(--Paragraph-Text, #5a5a59);
+  font-size: clamp(12px, 3vw, 16px);
+}
+.hidden-card {
+  opacity: 0;
+  display: none;
+  overflow: hidden;
+  transform: translateX(-50px);
+}
+.hidden-card.show {
+  opacity: 1;
+  display: flex;
+  height: auto;
+  transform: translateX(0);
+}
+.card-image {
+  flex-shrink: 0;
+  width: 110px;
+}
+.card-image img {
+  width: 100%;
+}
+.business-offer-card:nth-child(3) {
+  position: relative;
+  overflow: hidden;
+}
+.business-offer-card:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  opacity: 1;
+  pointer-events: none;
+}
+.business-offer-card:nth-child(3).show::after {
+  opacity: 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-120%);
+}
+#see-more-btn {
+  font-size: 15px;
+  width: 132px;
+  padding: 5px 20px;
+  border: var(--AbensonBlue, #1e22aa);
+  border-radius: 100px;
+  justify-content: center;
+  background: var(--AbensonBlue, #1e22aa);
+  font-family: var(--font-family, "Poppins");
+  color: var(--primary-text-bg, #fff);
+}
+/* members perks section */
+#members-perks-section {
+  padding: 40px 20px;
+}
+.members-perks-title {
+  color: var(--Paragraph-Text, #5a5a59);
+  font-family: var(--font-family, "Poppins");
+  background-color: var(--primary-text-bg, #fff);
+  font-size: clamp(12px, 3vw, 16px);
+  border: 1px solid rgba(19, 19, 19, 0.1);
+  border-radius: 40px;
+  padding: 8px 16px;
+  display: table;
+  margin: 0 auto;
+}
+.members-perks-heading {
+  color: var(--PrimaryTextColor, #4c525c);
+  font-family: var(--font-family, "Poppins");
+  text-align: start;
+  font-size: clamp(24px, 3vw, 52px);
+  margin: 16px 0;
+  line-height: 1.6;
+}
+.members-perks-description {
+  color: var(--SecondaryGray, #767676);
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(13px, 3vw, 18px);
+  margin-bottom: 20px;
+}
+.perks-list {
+  list-style: none;
+  font-family: var(--font-family, "Poppins");
+  font-size: 18px;
+  color: var(--PrimaryTextColor, #4c525c);
+  padding: 16px 0;
+}
+.perks-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.members-perks-container img {
+  max-width: 100%;
+  height: 280px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-join-ab-business-perks {
+  font-size: 15px;
+  color: var(--primary-text-bg, #fff);
+  background-color: var(--AbensonBlue, #1e22aa);
+  font-family: var(--font-family, "Poppins");
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+/* Explore Products Section */
+#explore-products-section {
+  padding: 40px 20px;
+}
+
+.explore-products-title {
+  color: var(--Paragraph-Text, #5a5a59);
+  font-family: var(--font-family, "Poppins");
+  background-color: var(--primary-text-bg, #fff);
+  font-size: clamp(12px, 3vw, 16px);
+  border: 1px solid rgba(19, 19, 19, 0.1);
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 40px;
+}
+.explore-products-heading {
+  color: var(--PrimaryTextColor, #4c525c);
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.3;
+  margin: 12px 0 16px 0;
+}
+.explore-section-description {
+  color: var(--SecondaryGray, #767676);
+  font-family: var(--font-family, "Poppins");
+  font-size: clamp(13px, 3vw, 18px);
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  /*Hero Page Section */
+  #hero-container {
+    display: flex;
+    background-color: var(--primary-text-bg, #fff);
+    justify-content: center;
+    width: 90%;
+    padding: 10px 0;
+    margin: 0 auto;
+    border-radius: 24px;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.08);
+  }
+  .hero-container-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #business-hero-section {
+    padding-bottom: 60px;
+  }
+  #hero-buttons {
+    display: block;
+    text-align: center;
+  }
+
+  #hero-buttons a {
+    font-family: var(--font-family, "Poppins");
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--AbensonBlue, #1e22aa);
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+  .btn-join-ab-business {
+    font-size: 14px;
+    margin: 10px 8px;
+    color: var(--primary-text-bg, #fff);
+    background-color: var(--AbensonBlue, #1e22aa);
+  }
+  .btn-get-qoute {
+    font-size: 14px;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--AbensonBlue, #1e22aa);
+    width: 10rem;
+    margin-bottom: 65px;
+    font-weight: 600;
+  }
+
+  .hero-container-item + .hero-container-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30%;
+    height: 40%;
+    width: 1px;
+    background-color: #ccc;
+  }
+  /* Explore Products Section */
+  .explore-products-content {
+    text-align: center;
+  }
+}
+/* Screen for Desktop */
+@media screen and (min-width: 1024px) {
+  .intro-paragraph {
+    margin: 35px 40px;
+    padding: 0 330px;
+  }
+  #hero-buttons a {
+    padding: 10px 25px;
+  }
+  #hero-container {
+    background: var(--primary-text-bg, #fff);
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    width: 70%;
+  }
+  /* Business Solutions Section */
+  #business-solutions-section {
+    padding: 80px 100px;
+  }
+  .business-solutions-intro {
+    margin: 0;
+  }
+  .business-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 40px;
+  }
+  .business-offer-card {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px 16px;
+  }
+  .business-card-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-image {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  .card-image img {
+    height: 100%;
+    width: 100%;
+  }
+  .icon-wrapper svg {
+    width: 42px;
+    height: 42px;
+  }
+  .hidden-card {
+    display: flex;
+    opacity: 1;
+    transform: none;
+  }
+  .business-offer-card:nth-child(3)::after {
+    content: none;
+  }
+  .business-offer-card:nth-child(n + 5) {
+    opacity: 0;
+    display: none;
+    overflow: hidden;
+  }
+  .business-offer-card:nth-child(n + 5).show {
+    display: flex;
+    opacity: 1;
+  }
+}
