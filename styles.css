@@ -281,7 +281,9 @@ section {
 #explore-products-section {
   padding: 40px 20px;
 }
-
+.explore-products-content {
+  text-align: justify;
+}
 .explore-products-title {
   color: var(--Paragraph-Text, #5a5a59);
   font-family: var(--font-family, "Poppins");
@@ -303,7 +305,6 @@ section {
   color: var(--SecondaryGray, #767676);
   font-family: var(--font-family, "Poppins");
   font-size: clamp(13px, 3vw, 18px);
-  text-align: justify;
 }
 
 @media screen and (min-width: 768px) {
