@@ -19,7 +19,7 @@ section {
 
 /* Hero Section */
 #business-hero-section {
-  background-image: url(/img/background-image-hero-section.png);
+  background-image: url(img/background-image-hero-section.png);
   padding-top: 50px;
   background-size: contain;
 }
@@ -375,8 +375,8 @@ section {
 /* Screen for Desktop */
 @media screen and (min-width: 1024px) {
   .intro-paragraph {
-    margin: 35px 40px;
-    padding: 0 330px;
+    margin: 40px 0;
+    padding: 0 300px;
   }
   #hero-buttons a {
     padding: 10px 25px;
