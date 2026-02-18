@@ -253,14 +253,21 @@ section {
   color: var(--SecondaryGray, #767676);
   font-family: var(--font-family, "Poppins");
   font-size: clamp(13px, 3vw, 18px);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.perks-container {
+  text-align: center;
 }
 .perks-list {
   list-style: none;
   font-family: var(--font-family, "Poppins");
   font-size: 18px;
   color: var(--PrimaryTextColor, #4c525c);
-  padding: 16px 0;
+  padding: 0 15px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 36px;
 }
 .perks-list li {
   display: flex;
@@ -274,7 +281,6 @@ section {
   display: block;
   margin: 0 auto;
 }
-
 .btn-join-ab-business-perks {
   font-size: 15px;
   color: var(--primary-text-bg, #fff);
@@ -450,5 +456,20 @@ section {
   .business-offer-card:nth-child(n + 5).show {
     display: flex;
     opacity: 1;
+  }
+  /* Member Perks Section */
+  .members-perks-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .members-perks-container img {
+    order: -1;
+    width: 100%;
+    height: auto;
+  }
+  .perks-list-container,
+  .perks-container {
+    flex: 1;
   }
 }
