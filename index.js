@@ -1,9 +1,15 @@
 const seeMoreBtn = document.getElementById("see-more-btn");
-const hiddenCards = document.querySelectorAll(".hidden-card");
-const fadeCard = document.querySelector(".business-offer-card:nth-child(3)");
+const businessCardGrid = document.querySelector(".business-card-grid");
+
+const collapsedHeight = 410;
+let expanded = false;
 
 seeMoreBtn.addEventListener("click", () => {
-  hiddenCards.forEach((card) => card.classList.add("show"));
-  seeMoreBtn.style.display = "none";
-  fadeCard.classList.add("show");
+  businessCardGrid.style.maxHeight = expanded
+    ? collapsedHeight + "px"
+    : businessCardGrid.scrollHeight + "px";
+
+  seeMoreBtn.textContent = expanded ? "See More" : "See Less";
+
+  expanded = !expanded;
 });
