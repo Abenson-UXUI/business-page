@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family, "Poppins");
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -26,7 +27,7 @@ section {
 /* Hero Section */
 #business-hero-section {
   background-image: url(img/background-image-hero-section.png);
-  padding-top: 50px;
+  padding: 50px 0 30px;
   background-size: contain;
 }
 .business-hero-headContainer {
@@ -63,40 +64,47 @@ section {
   align-items: center;
   gap: 12px;
 }
-
 #hero-buttons a {
   text-decoration: none;
-  border: 2px solid var(--AbensonBlue, #1e22aa);
   border-radius: 30px;
   padding: 8px 20px;
   font-weight: 500;
+  width: 100%;
+  justify-content: center;
 }
 .btn-join-ab-business {
   font-size: clamp(12px, 3vw, 15px);
   color: var(--primary-text-bg, #fff);
   background-color: var(--AbensonBlue, #1e22aa);
+  transition: background-color 0.3s ease;
+}
+.btn-join-ab-business:hover {
+  background-color: #0056b3;
 }
 .btn-get-qoute {
   font-size: clamp(12px, 3vw, 15px);
+  border: 1.5px solid var(--AbensonBlue, #1e22aa);
   display: flex;
   align-items: center;
   gap: 0.4em;
   color: var(--AbensonBlue, #1e22aa);
-  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-get-qoute:hover {
+  background-color: var(--AbensonBlue, #1e22aa);
+  color: var(--primary-text-bg, #fff);
 }
 #hero-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
   background: var(--primary-text-bg, #fff);
   box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.08);
-  padding: 24px 0;
+  padding: 20px;
   width: fit-content;
-  margin: 0 auto 20px;
-  border-radius: 20px;
+  margin: 0 auto;
+  border-radius: 15px;
   align-items: start;
 }
-
 .hero-container-item {
   display: flex;
   padding: 20px;
@@ -150,8 +158,24 @@ section {
   position: relative;
   max-height: 410px;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.3s ease;
   padding: 10px;
+}
+.business-card-grid::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+  opacity: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 61.68%);
+}
+.business-card-grid.expanded::after {
+  opacity: 0;
 }
 .business-offer-card {
   display: flex;
@@ -199,17 +223,6 @@ section {
 .card-image img {
   width: 100%;
 }
-.business-card-grid::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 85px;
-  opacity: 1;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 61.68%);
-}
 .button-container {
   display: flex;
   justify-content: center;
@@ -222,7 +235,6 @@ section {
   padding: 5px 20px;
   border: var(--AbensonBlue, #1e22aa);
   border-radius: 100px;
-  justify-content: center;
   background: var(--AbensonBlue, #1e22aa);
   color: var(--primary-text-bg, #fff);
   cursor: pointer;
@@ -303,10 +315,10 @@ section {
   text-decoration: none;
   border-radius: 30px;
   padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 .btn-join-ab-business-perks:hover {
   background-color: #0056b3;
-  transition: background-color 0.3s ease;
 }
 /* Explore Products Section */
 #explore-products-section {
@@ -337,7 +349,7 @@ section {
   color: var(--SecondaryGray, #767676);
   font-size: clamp(13px, 3vw, 18px);
   font-weight: var(--paragraph-font-weight, 400);
-  /* width: 93vw; */
+  width: 93vw;
   max-width: 350px;
 }
 /* Contact us form */
@@ -356,7 +368,7 @@ section {
   border: 1px solid rgba(19, 19, 19, 0.1);
   padding: 8px 16px;
   border-radius: 40px;
-  display: table;
+  display: inline-block;
   margin: 0 auto;
   font-weight: var(--title-font-weight, 500);
 }
@@ -394,44 +406,88 @@ section {
 .contact-us-list p {
   font-size: 14px;
   color: var(--SecondaryGray, #767676);
-  font-weight: var(--heading-font-weight, 600);
+  font-weight: var(--paragraph-font-weight, 400);
 }
-.contact-us-form img {
+.contact-us-form-wrapper img {
   display: block;
   margin: 0 auto 40px;
-  gap: 40px;
+  width: clamp(136px, 20vw, 202px);
+  height: auto;
 }
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
+}
+.form-group {
+  position: relative;
+}
+.form-group label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6a6f78;
+}
+.form-control {
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px;
+  padding: 14px 18px;
+  outline: none;
+  font-size: 14px;
+  font-weight: var(--paragraph-font-weight, 400);
+  color: var(--PrimaryTextColor, #4c525c);
+  background: var(--primary-text-bg, #fff);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.form-control:focus {
+  border-color: var(--AbensonBlue, #1e22aa);
+  box-shadow: 0 0 0 3px rgba(74, 179, 244, 0.15);
 }
 .row-form {
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-fieldset {
-  border: 1px solid #dcdcdc;
-  border-radius: 30px;
-  background: var(--primary-text-bg, #fff);
-  padding: 1px;
   width: 100%;
 }
-fieldset legend {
-  font-size: 11px;
-  font-weight: 700;
-  color: #6a6f78;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0 4px;
-  margin-left: 4px;
+.row-form .form-group {
+  flex: 1;
 }
-fieldset input {
-  width: 100%;
+form p {
+  color: var(--SecondaryGray, #767676);
+  text-align: center;
+}
+.get-qoute-anchor {
+  text-decoration: none;
+  font-weight: var(--paragraph-font-weight, 400);
+  color: #019bf0;
+}
+.formBtn {
+  text-align: center;
   border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  background: var(--AbensonBlue, #1e22aa);
+  width: fit-content;
+  color: var(--primary-text-bg, #fff);
+  padding: 13px 80px;
+  margin: 0 auto 30px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
-
+.formBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
 @media (width > 550px) {
   /* Business Solution Section */
   .perks-list {
@@ -479,32 +535,12 @@ fieldset input {
     padding-bottom: 60px;
   }
   #hero-buttons {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
   }
   #hero-buttons a {
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--AbensonBlue, #1e22aa);
-    border-radius: 30px;
-    padding: 10px 20px;
-  }
-  .btn-join-ab-business {
-    font-size: 14px;
-    margin: 10px 8px;
-    color: var(--primary-text-bg, #fff);
-    background-color: var(--AbensonBlue, #1e22aa);
-  }
-  .btn-get-qoute {
-    font-size: 14px;
-    align-items: center;
-    gap: 0.4em;
-    color: var(--AbensonBlue, #1e22aa);
-    width: 10rem;
-    margin-bottom: 65px;
-    font-weight: 600;
+    min-width: 220px;
+    white-space: nowrap;
   }
   .hero-container-item + .hero-container-item::before {
     content: "";
@@ -595,5 +631,29 @@ fieldset input {
   }
   .members-perks-container img {
     display: none;
+  }
+  /* Contact Us section */
+  #contact-us-section {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    padding: 80px 80px 14px;
+    background: linear-gradient(180deg, #eef3fb 0%, #fff 50%);
+  }
+  .contact-us-content {
+    align-items: flex-start;
+  }
+  .contact-us-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .contact-us-title,
+  .contact-us-list {
+    margin: 0;
+  }
+  .contact-us-form-wrapper {
+    width: 100%;
+    max-width: 550px;
   }
 }
