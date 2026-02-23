@@ -478,7 +478,7 @@ form p {
   width: fit-content;
   color: var(--primary-text-bg, #fff);
   padding: 13px 80px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   cursor: pointer;
   transition:
     background-color 0.3s ease,
@@ -592,6 +592,24 @@ form p {
     width: 63vw;
     max-width: 700px;
   }
+  /* Contact us section */
+  .contact-us-content {
+    text-align: center;
+  }
+  .contact-us-description {
+    margin: 0 auto;
+  }
+  .contact-us-list {
+    flex-direction: row;
+  }
+  form {
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
+    padding: 35px 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
 }
 /* Screen for Desktop */
 @media screen and (min-width: 1024px) {
@@ -637,11 +655,14 @@ form p {
     display: flex;
     flex-direction: row;
     gap: 200px;
-    padding: 70px 80px 14px;
+    padding: 80px 80px 14px;
     background: linear-gradient(180deg, #eef3fb 0%, #fff 50%);
   }
   .contact-us-content {
     align-items: flex-start;
+  }
+  .contact-us-description {
+    text-align: start;
   }
   .contact-us-content-wrapper {
     display: flex;
@@ -651,6 +672,7 @@ form p {
   .contact-us-title,
   .contact-us-list {
     margin: 0;
+    flex-direction: column;
   }
   .contact-us-form-wrapper {
     width: 100%;
