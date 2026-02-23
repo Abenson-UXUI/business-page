@@ -88,11 +88,6 @@ section {
   align-items: center;
   gap: 0.4em;
   color: var(--AbensonBlue, #1e22aa);
-  transition: background-color 0.3s ease;
-}
-.btn-get-qoute:hover {
-  background-color: var(--AbensonBlue, #1e22aa);
-  color: var(--primary-text-bg, #fff);
 }
 #hero-container {
   display: flex;
