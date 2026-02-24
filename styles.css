@@ -607,7 +607,7 @@ form p {
 }
 /* Screen for Desktop */
 @media screen and (min-width: 1024px) {
-  /*  */
+  /*Shared styles for all titles */
   .title-base {
     padding: 8px 12px;
   }
