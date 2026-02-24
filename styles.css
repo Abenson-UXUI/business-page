@@ -294,7 +294,7 @@ section {
 }
 .perks-list {
   list-style: none;
-  font-size: 18px;
+  font-size: clamp(16px, 3vw, 18px);
   color: var(--PrimaryTextColor, #4c525c);
   padding: 0 15px;
   gap: 20px;
