@@ -584,7 +584,7 @@ form p {
     max-width: 700px;
   }
   /* Contact us section */
-  #contact-us-section {
+  /* #contact-us-section {
     background: linear-gradient(180deg, #eef3fb 0%, #fff 50%);
   }
   .contact-us-content {
@@ -603,7 +603,7 @@ form p {
     max-width: 600px;
     margin: 0 auto;
     border-radius: 20px;
-  }
+  } */
 }
 /* Screen for Desktop */
 @media (width > 1024px) {
