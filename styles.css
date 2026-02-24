@@ -424,7 +424,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 0 40px;
+  padding: 0 32px;
 }
 .form-group {
   position: relative;
@@ -617,6 +617,10 @@ form p {
     margin: 0 auto;
     border-radius: 20px;
   } */
+  /* Contact Us Section */
+  form {
+    padding: 0 40px;
+  }
 }
 /* Screen for Desktop */
 @media (width > 1024px) {
@@ -665,7 +669,7 @@ form p {
   #contact-us-section {
     display: flex;
     flex-direction: row;
-    gap: 200px;
+    gap: 210px;
     padding: 80px 80px 14px;
   }
   .contact-us-content {
@@ -683,6 +687,9 @@ form p {
   .contact-us-list {
     margin: 0;
     flex-direction: column;
+  }
+  form {
+    padding: 0;
   }
   .contact-us-form-wrapper {
     width: 100%;
