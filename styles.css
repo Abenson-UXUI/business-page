@@ -32,12 +32,18 @@ section {
 }
 /* Shared styles for all titles */
 .title-base {
+  position: relative;
+  display: inline-block;
+  padding: 8px;
   background-color: var(--primary-text-bg, #fff);
   font-size: clamp(12px, 3vw, 14px);
-  border: 1px solid #1e22aa;
-  padding: 8px;
-  border-radius: 10px;
   font-weight: var(--title-font-weight, 500);
+  /* gradient border */
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #1e22aa, #006de2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 /* Hero Section */
@@ -420,11 +426,13 @@ section {
   width: clamp(136px, 20vw, 202px);
   height: auto;
 }
+.contact-us-form-wrapper {
+  padding: 0 32px;
+}
 form {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 0 32px;
 }
 .form-group {
   position: relative;
@@ -618,8 +626,8 @@ form p {
     border-radius: 20px;
   } */
   /* Contact Us Section */
-  form {
-    padding: 0 40px;
+  .contact-us-form-wrapper {
+    padding: 0 32px;
   }
 }
 /* Screen for Desktop */
@@ -694,5 +702,6 @@ form p {
   .contact-us-form-wrapper {
     width: 100%;
     max-width: 550px;
+    padding: 0;
   }
 }
