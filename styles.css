@@ -388,7 +388,7 @@ section {
   color: var(--SecondaryGray, #767676);
   font-size: clamp(13px, 3vw, 18px);
   font-weight: var(--paragraph-font-weight, 400);
-  width: 98vw;
+  width: 90vw;
   max-width: 441px;
 }
 .contact-us-list {
