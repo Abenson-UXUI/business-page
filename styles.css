@@ -23,12 +23,38 @@ section {
   max-width: 1400px;
   margin: 0 auto;
 }
+/* Title text style */
+.linear-text-color {
+  background: linear-gradient(90deg, #1e22aa 0%, #006de2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Shared styles for all titles */
+.title-base {
+  background-color: var(--primary-text-bg, #fff);
+  font-size: clamp(12px, 3vw, 14px);
+  border: 1px solid #1e22aa;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: var(--title-font-weight, 500);
+}
 
 /* Hero Section */
 #business-hero-section {
-  background-image: url(img/background-image-hero-section.png);
   padding: 50px 0 30px;
   background-size: contain;
+  position: relative;
+}
+#business-hero-section::before {
+  content: "";
+  height: 100%;
+  width: 100vw;
+  background-image: url(img/background-image-hero-section.png);
+  position: absolute;
+  margin-left: calc(-50vw + 50%);
+  z-index: -1;
+  top: 0;
 }
 .business-hero-headContainer {
   display: flex;
@@ -88,6 +114,7 @@ section {
   align-items: center;
   gap: 0.4em;
   color: var(--AbensonBlue, #1e22aa);
+  background-color: var(--primary-text-bg, #fff);
 }
 #hero-container {
   display: flex;
@@ -124,14 +151,7 @@ section {
   margin: 0 20px;
 }
 .business-solutions-title {
-  color: var(--Paragraph-Text, #5a5a59);
-  background-color: var(--primary-text-bg, #fff);
-  font-size: clamp(12px, 3vw, 16px);
-  border: 1px solid rgba(19, 19, 19, 0.1);
-  padding: 8px 16px;
-  font-weight: var(--title-font-weight, 500);
   display: inline-block;
-  border-radius: 40px;
 }
 .business-solutions-heading {
   color: var(--PrimaryTextColor, #4c525c);
@@ -252,15 +272,8 @@ section {
   display: none;
 }
 .members-perks-title {
-  color: var(--Paragraph-Text, #5a5a59);
-  background-color: var(--primary-text-bg, #fff);
-  font-size: clamp(12px, 3vw, 16px);
-  border: 1px solid rgba(19, 19, 19, 0.1);
-  border-radius: 40px;
-  padding: 8px 16px;
   display: table;
   margin: 0 auto;
-  font-weight: var(--title-font-weight, 500);
 }
 .members-perks-heading {
   color: var(--PrimaryTextColor, #4c525c);
@@ -325,14 +338,7 @@ section {
   gap: 16px;
 }
 .explore-products-title {
-  color: var(--Paragraph-Text, #5a5a59);
-  background-color: var(--primary-text-bg, #fff);
-  font-size: clamp(12px, 3vw, 16px);
-  border: 1px solid rgba(19, 19, 19, 0.1);
-  padding: 8px 16px;
-  border-radius: 40px;
   width: fit-content;
-  font-weight: var(--title-font-weight, 500);
 }
 .explore-products-heading {
   color: var(--PrimaryTextColor, #4c525c);
@@ -357,15 +363,8 @@ section {
   gap: 16px;
 }
 .contact-us-title {
-  color: var(--Paragraph-Text, #5a5a59);
-  background-color: var(--primary-text-bg, #fff);
-  font-size: clamp(12px, 3vw, 16px);
-  border: 1px solid rgba(19, 19, 19, 0.1);
-  padding: 8px 16px;
-  border-radius: 40px;
   display: inline-block;
   margin: 0 auto;
-  font-weight: var(--title-font-weight, 500);
 }
 .contact-us-heading {
   color: var(--PrimaryTextColor, #4c525c);
@@ -579,15 +578,15 @@ form p {
   .explore-products-content {
     text-align: center;
   }
-  .explore-products-title {
-    margin: 0 auto;
-  }
   .explore-section-description {
     margin: 0 auto;
     width: 63vw;
     max-width: 700px;
   }
   /* Contact us section */
+  #contact-us-section {
+    background: linear-gradient(180deg, #eef3fb 0%, #fff 50%);
+  }
   .contact-us-content {
     text-align: center;
   }
@@ -608,6 +607,10 @@ form p {
 }
 /* Screen for Desktop */
 @media screen and (min-width: 1024px) {
+  /*  */
+  .title-base {
+    padding: 8px 12px;
+  }
   #hero-buttons a {
     padding: 10px 25px;
   }
@@ -651,7 +654,18 @@ form p {
     flex-direction: row;
     gap: 200px;
     padding: 80px 80px 14px;
+    position: relative;
+  }
+  #contact-us-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
     background: linear-gradient(180deg, #eef3fb 0%, #fff 50%);
+    z-index: -1;
   }
   .contact-us-content {
     align-items: flex-start;
