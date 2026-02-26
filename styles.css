@@ -131,7 +131,6 @@ section {
   width: fit-content;
   margin: 0 auto;
   border-radius: 15px;
-  align-items: start;
 }
 .hero-container-item {
   display: flex;
@@ -561,10 +560,10 @@ form p {
     content: "";
     position: absolute;
     left: 0;
-    top: 30%;
+    top: 50%;
     height: 40%;
-    width: 1px;
-    background-color: #ccc;
+    transform: translateY(-50%);
+    border-left: 1px solid #ccc;
   }
   /* Business Solutions Section */
   .business-card-grid {
