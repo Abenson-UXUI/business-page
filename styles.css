@@ -537,13 +537,22 @@ form p {
   }
   .hero-container-item {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     flex: 1;
+    gap: 16px;
   }
   .hero-container-item:first-of-type {
     margin-left: clamp(16px, 2vw, 24px);
+  }
+  .hero-container-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hero-container-item p {
+    max-width: 200px;
+    width: 100%;
   }
   #business-hero-section {
     padding-bottom: 60px;
