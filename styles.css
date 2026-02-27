@@ -48,7 +48,7 @@ section {
 
 /* Hero Section */
 #business-hero-section {
-  padding: 50px 0 30px;
+  padding: 10px 0 30px;
   background-size: contain;
   position: relative;
 }
@@ -65,7 +65,7 @@ section {
 .business-hero-headContainer {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 20px 20px 40px;
   align-items: center;
   gap: 24px;
 }
@@ -86,8 +86,8 @@ section {
   color: #4a5568;
   text-align: center;
   font-size: clamp(12px, 3vw, 16px);
-  width: 80vw;
-  max-width: 750px;
+  width: 75vw;
+  max-width: 752px;
   font-weight: var(--paragraph-font-weight, 400);
 }
 #hero-buttons {
@@ -99,7 +99,7 @@ section {
 #hero-buttons a {
   text-decoration: none;
   border-radius: 30px;
-  padding: 8px 20px;
+  padding: 13px 25px;
   font-weight: 500;
   width: 100%;
   justify-content: center;
@@ -209,6 +209,7 @@ section {
 .card-text-content {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .business-card-title {
   display: flex;
@@ -525,8 +526,16 @@ form p {
     max-width: 700px;
   }
 }
+@media (width > 851px) {
+  #contact-us-section .contact-us-list {
+    flex-direction: row;
+  }
+}
 @media (width > 768px) {
   /*Hero Page Section */
+  #business-hero-section {
+    padding-bottom: 50px;
+  }
   #hero-container {
     flex-direction: row;
     justify-content: center;
@@ -554,9 +563,6 @@ form p {
     max-width: 200px;
     width: 100%;
   }
-  #business-hero-section {
-    padding-bottom: 60px;
-  }
   #hero-buttons {
     display: flex;
     flex-direction: row;
@@ -577,7 +583,7 @@ form p {
   /* Business Solutions Section */
   .business-card-grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   }
   .business-offer-card {
@@ -645,7 +651,7 @@ form p {
     padding: 8px 12px;
   }
   #hero-buttons a {
-    padding: 10px 25px;
+    padding: 15px 25px;
   }
   #hero-container {
     background: var(--primary-text-bg, #fff);
@@ -662,7 +668,7 @@ form p {
   }
   .business-card-grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 35px;
   }
   /* Member Perks Section */
@@ -672,7 +678,6 @@ form p {
   .members-perks-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
   }
   #members-perks-section > img {
@@ -685,8 +690,8 @@ form p {
   #contact-us-section {
     display: flex;
     flex-direction: row;
-    gap: 210px;
-    padding: 80px 80px 14px;
+    gap: clamp(15px, 15vw, 300px);
+    padding: 80px 50px 14px 80px;
   }
   .contact-us-content {
     align-items: flex-start;
@@ -699,8 +704,8 @@ form p {
     flex-direction: column;
     gap: 60px;
   }
-  .contact-us-title,
-  .contact-us-list {
+  #contact-us-section .contact-us-title,
+  #contact-us-section .contact-us-list {
     margin: 0;
     flex-direction: column;
   }
@@ -709,7 +714,7 @@ form p {
   }
   .contact-us-form-wrapper {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
     padding: 0;
   }
 }
