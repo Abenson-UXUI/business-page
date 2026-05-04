@@ -100,12 +100,15 @@ section {
   text-decoration: none;
   border-radius: 30px;
   padding: 13px 25px;
+  font-size: clamp(12px, 3vw, 15px);
   font-weight: 500;
-  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  width: 100%;
 }
 .btn-join-ab-business {
-  font-size: clamp(12px, 3vw, 15px);
   color: var(--primary-text-bg, #fff);
   background-color: var(--AbensonBlue, #1e22aa);
   transition: background-color 0.3s ease;
@@ -114,10 +117,7 @@ section {
   background-color: #0056b3;
 }
 .btn-get-qoute {
-  font-size: clamp(12px, 3vw, 15px);
   border: 1.5px solid var(--AbensonBlue, #1e22aa);
-  display: flex;
-  align-items: center;
   gap: 0.4em;
   color: var(--AbensonBlue, #1e22aa);
   background-color: var(--primary-text-bg, #fff);
@@ -564,12 +564,11 @@ form p {
     width: 100%;
   }
   #hero-buttons {
-    display: flex;
     flex-direction: row;
   }
   #hero-buttons a {
-    min-width: 220px;
-    white-space: nowrap;
+    min-width: 250px;
+    width: 100%;
   }
   .hero-container-item + .hero-container-item::before {
     content: "";
